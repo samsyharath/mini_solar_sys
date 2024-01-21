@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public void LoadNextScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +14,12 @@ public class NextScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if 
-        
+        if (Input.GetKeyDown(nextKey))
+        {
+            SceneManager.LoadScene("Level 1");
+            Debug.Log("Next scene.");
+        }
+
     }
+    KeyCode nextKey = KeyCode.Space;
 }
